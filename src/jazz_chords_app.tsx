@@ -1754,7 +1754,7 @@ const JazzChordsApp = () => {
     return (
       <>
         {/* Desktop - Sticky horizontal keyboard */}
-        <div className="hidden lg:block sticky top-0 z-30 bg-black/50 backdrop-blur-sm py-4 border-b-2 border-white/20">
+        <div className="hidden lg:block sticky top-0 z-30 bg-black bg-opacity-50 backdrop-blur-sm py-4 border-b-2 border-white border-opacity-20">
           <div className="flex justify-center items-end gap-0 overflow-x-auto pb-2 px-4">
             {octaves.map(octave => renderOctave(octave))}
           </div>
@@ -1773,7 +1773,7 @@ const JazzChordsApp = () => {
           {/* Overlay */}
           {sidebarOpen && (
             <div
-              className="fixed inset-0 bg-black/50 z-40"
+              className="fixed inset-0 bg-black bg-opacity-50 z-40"
               onClick={() => setSidebarOpen(false)}
             />
           )}
@@ -1918,7 +1918,7 @@ const JazzChordsApp = () => {
       <PianoKeyboard />
       
       {/* Header */}
-      <div className="p-4 bg-black/30 backdrop-blur-sm">
+      <div className="p-4 bg-black bg-opacity-30 backdrop-blur-sm">
         <div className="flex items-center justify-center gap-3 mb-4">
           <h1 className="text-3xl md:text-4xl font-bold text-center">jazzchords.io</h1>
           <button
@@ -1950,7 +1950,7 @@ const JazzChordsApp = () => {
                   {displayNote('C♯')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('C♯', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2011,7 +2011,7 @@ const JazzChordsApp = () => {
                   {displayNote('D♯')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('D♯', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2075,7 +2075,7 @@ const JazzChordsApp = () => {
                   {displayNote('F♯')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('F♯', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2136,7 +2136,7 @@ const JazzChordsApp = () => {
                   {displayNote('G♯')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('G♯', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2197,7 +2197,7 @@ const JazzChordsApp = () => {
                   {displayNote('A♯')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('A♯', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2263,7 +2263,7 @@ const JazzChordsApp = () => {
                   {displayNote('C')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('C', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2324,7 +2324,7 @@ const JazzChordsApp = () => {
                   {displayNote('D')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('D', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2385,7 +2385,7 @@ const JazzChordsApp = () => {
                   {displayNote('E')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('E', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2446,7 +2446,7 @@ const JazzChordsApp = () => {
                   {displayNote('F')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('F', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2507,7 +2507,7 @@ const JazzChordsApp = () => {
                   {displayNote('G')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('G', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2568,7 +2568,7 @@ const JazzChordsApp = () => {
                   {displayNote('A')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('A', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2629,7 +2629,7 @@ const JazzChordsApp = () => {
                   {displayNote('B')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
                     {degreeForRoot('B', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2896,7 +2896,7 @@ const JazzChordsApp = () => {
                 onClick={() => playChord(selectedRoot, chordType)}
                 className="bg-gradient-to-br from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 
                            p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200
-                           active:scale-95 font-bold text-base border-2 border-white/30 w-full h-full"
+                           active:scale-95 font-bold text-base border-2 border-white border-opacity-30 w-full h-full"
               >
                 {getChordDisplay(selectedRoot, chordType)}
               </button>
@@ -2962,7 +2962,7 @@ const JazzChordsApp = () => {
                   }
                 }
               }}
-              className="px-3 py-2 rounded-lg bg-slate-800 text-white text-sm border border-slate-600 focus:outline-none focus:ring-2 focus:ring-amber-400/50 [&>option]:bg-slate-800 [&>option]:text-white"
+              className="px-3 py-2 rounded-lg bg-gradient-to-b from-slate-700 to-slate-800 text-white text-sm border border-slate-600 focus:outline-none focus:ring-2 focus:ring-amber-400/50"
               defaultValue=""
             >
               <option value="">Select a standard...</option>
@@ -3253,7 +3253,7 @@ const JazzChordsApp = () => {
                   const measureHasFocus = progression.some(p => p.measure === mIdx + 1 && p.id === tileFocusedId);
                   const measureMinH = measureHasFocus ? '120px' : '60px';
                   return (
-                    <div key={mIdx} data-measure={mIdx + 1} className={`relative p-2 ${isLastMeasure ? '' : 'border-r border-white/20'}`}>
+                    <div key={mIdx} data-measure={mIdx + 1} className={`relative p-2 ${isLastMeasure ? '' : 'border-r border-white border-opacity-20'}`}>
                       <div className="text-xs mb-2 opacity-60">{mIdx + 1}</div>
                       <div className="relative" style={{ minHeight: measureMinH }}>
                         {/* beat cells - visual columns but positioned absolutely so tiles can be leftÃ¢â€ â€™right */}
@@ -3330,7 +3330,7 @@ const JazzChordsApp = () => {
                                   return updated;
                                 });
                               }}
-                              className="absolute top-0 bottom-0 border-b border-white/8"
+                              className="absolute top-0 bottom-0 border-b border-white border-opacity-8"
                               style={{ left: `${leftPct}%`, width: `${widthPct}%`, zIndex: 1 }}
                             />
                           );
@@ -3345,7 +3345,7 @@ const JazzChordsApp = () => {
                             <div
                               aria-hidden
                               style={{ position: 'absolute', left: `calc(${plLeft}% + 2px)`, width: `calc(${plWidth}% - 4px)`, top: 6, zIndex: 19 }}
-                              className="pointer-events-none rounded bg-white/15 border border-white/30"
+                              className="pointer-events-none rounded bg-white bg-opacity-15 border border-white border-opacity-30"
                             />
                           );
                         })()}
@@ -3373,7 +3373,7 @@ const JazzChordsApp = () => {
                                 setTileFocusedId(prev => prev === ch.id ? null : prev);
                               }}
                               style={{ position: 'absolute', left: `calc(${left}% + 2px)`, width: `calc(${width}% - 4px)`, top: 0, zIndex: 10 }}
-                              className="group p-2 bg-slate-700/80 border border-slate-500/50 rounded flex flex-col items-center text-sm overflow-visible"
+                              className="group p-2 bg-white bg-opacity-5 rounded flex flex-col items-center text-sm overflow-visible"
                             >
                               {/* left resize handle */}
                               <div
@@ -3411,7 +3411,7 @@ const JazzChordsApp = () => {
                                     </div>
                                     
                                     {/* Individual chord bass note editor */}
-                                    <div className="mt-2 p-1 bg-black/20 rounded">
+                                    <div className="mt-2 p-1 bg-black bg-opacity-20 rounded">
                                       <div className="text-xs text-center text-gray-300 mb-1">Bass Note</div>
                                       <div className="flex flex-wrap gap-1 justify-center">
                                         <button
@@ -3650,7 +3650,7 @@ const JazzChordsApp = () => {
                                   window.addEventListener('pointerup', onPointerUp);
                                 }}
                               >
-                                <div className="bg-white/10 rounded-md p-1 flex items-center justify-center">
+                                <div className="bg-white bg-opacity-10 rounded-md p-1 flex items-center justify-center">
                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="opacity-95">
                                     <path d="M12 5v14" />
                                     <path d="M5 12h14" />
