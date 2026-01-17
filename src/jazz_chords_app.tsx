@@ -1,4 +1,4 @@
-﻿// to start: cd "jazz-chords" && npm run dev
+// to start: cd "jazz-chords" && npm run dev
 import { useState, useEffect, useRef } from 'react';
 import { Volume2, VolumeX, Play, Trash2, Info, X, MessageSquare } from 'lucide-react';
 
@@ -51,13 +51,13 @@ const JazzChordsApp = () => {
     progressionRef.current = progression;
   }, [progression]);
 
-  const roots = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
+  const roots = ['C', 'C?', 'D', 'D?', 'E', 'F', 'F?', 'G', 'G?', 'A', 'A?', 'B'];
   
   const chordTypes = [
     { name: '7', intervals: [0, 4, 7, 10] },
     { name: 'maj7', intervals: [0, 4, 7, 11] },
     { name: 'min7', intervals: [0, 3, 7, 10] },
-    { name: 'm7♭5', intervals: [0, 3, 6, 10] },
+    { name: 'm7?5', intervals: [0, 3, 6, 10] },
     { name: 'dim7', intervals: [0, 3, 6, 9] },
     { name: 'maj9', intervals: [0, 4, 7, 11, 14] },
     { name: '9', intervals: [0, 4, 7, 10, 14] },
@@ -68,9 +68,9 @@ const JazzChordsApp = () => {
     { name: 'maj13', intervals: [0, 4, 7, 11, 14, 21] },
     { name: '13', intervals: [0, 4, 7, 10, 14, 21] },
     { name: 'min13', intervals: [0, 3, 7, 10, 14, 21] },
-    { name: '7♯11', intervals: [0, 4, 7, 10, 18] },
-    { name: '7♭9', intervals: [0, 4, 7, 10, 13] },
-    { name: '7♯9', intervals: [0, 4, 7, 10, 15] },
+    { name: '7?11', intervals: [0, 4, 7, 10, 18] },
+    { name: '7?9', intervals: [0, 4, 7, 10, 13] },
+    { name: '7?9', intervals: [0, 4, 7, 10, 15] },
     { name: 'alt', intervals: [0, 4, 6, 10, 13] },
     { name: 'sus2', intervals: [0, 2, 7] },
     { name: 'sus4', intervals: [0, 5, 7] },
@@ -127,9 +127,9 @@ const JazzChordsApp = () => {
       progression: [
         { root: 'C', chordType: '6', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2, bass: 'D' },
+        { root: 'B?', chordType: '7', duration: 2, bass: 'D' },
         { root: 'C', chordType: 'maj7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2 },
+        { root: 'B?', chordType: '7', duration: 2 },
         { root: 'A', chordType: '7', duration: 4 }, 
         { root: 'D', chordType: '7', duration: 4 },
         { root: 'G', chordType: '7', duration: 4, bass: 'B' },
@@ -139,19 +139,19 @@ const JazzChordsApp = () => {
         { root: 'G', chordType: '7', duration: 2 },
         { root: 'C', chordType: '6', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2, bass: 'D' },
+        { root: 'B?', chordType: '7', duration: 2, bass: 'D' },
         { root: 'C', chordType: 'maj7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2 },
+        { root: 'B?', chordType: '7', duration: 2 },
         { root: 'A', chordType: '7', duration: 4 }, 
         { root: 'D', chordType: '7', duration: 4 },
         { root: 'G', chordType: '7', duration: 4, bass: 'B' },
         { root: 'C', chordType: '6', duration: 4 },
         { root: 'C', chordType: '6', duration: 2 },
-        { root: 'B', chordType: '7♭9', duration: 2 },
+        { root: 'B', chordType: '7?9', duration: 2 },
         
         { root: 'E', chordType: 'min7', duration: 4 },
-        { root: 'F♯', chordType: 'min7♭5', duration: 2 },
-        { root: 'B', chordType: '7♭9', duration: 2 },
+        { root: 'F?', chordType: 'min7?5', duration: 2 },
+        { root: 'B', chordType: '7?9', duration: 2 },
         { root: 'E', chordType: 'min7', duration: 4 },
         { root: 'A', chordType: '7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
@@ -162,9 +162,9 @@ const JazzChordsApp = () => {
         { root: 'G', chordType: '7', duration: 2 },
         { root: 'C', chordType: '6', duration: 4},
         { root: 'F', chordType: 'min7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2, bass: 'D' },
+        { root: 'B?', chordType: '7', duration: 2, bass: 'D' },
         { root: 'C', chordType: 'maj7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2 },
+        { root: 'B?', chordType: '7', duration: 2 },
         { root: 'A', chordType: '7', duration: 4 }, 
         { root: 'D', chordType: '7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 2 },
@@ -180,17 +180,17 @@ const JazzChordsApp = () => {
       beatsPerMeasure: 4,
       progression: [
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: 'min7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'min7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'G', chordType: '7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: '7', duration: 4 },
         { root: 'G', chordType: 'maj7', duration: 4 },
@@ -199,14 +199,14 @@ const JazzChordsApp = () => {
         { root: 'D', chordType: '7', duration: 4 },
         { root: 'G', chordType: 'maj7', duration: 4 },
         { root: 'G', chordType: 'maj7', duration: 4 },
-        { root: 'F♯', chordType: 'min7♭5', duration: 4 },
-        { root: 'B', chordType: '7♭9', duration: 4 },
+        { root: 'F?', chordType: 'min7?5', duration: 4 },
+        { root: 'B', chordType: '7?9', duration: 4 },
         { root: 'E', chordType: 'min7', duration: 4 },
         { root: 'E', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: 'min7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'min7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'G', chordType: '7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 2 },
@@ -223,8 +223,8 @@ const JazzChordsApp = () => {
         { root: 'G', chordType: 'min7', duration: 4 },
         { root: 'C', chordType: '7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
-        { root: 'E', chordType: 'min7♭5', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
+        { root: 'E', chordType: 'min7?5', duration: 4 },
         { root: 'A', chordType: '7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
@@ -232,11 +232,11 @@ const JazzChordsApp = () => {
         { root: 'C', chordType: '7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'E', chordType: 'min7♭5', duration: 4 },
+        { root: 'E', chordType: 'min7?5', duration: 4 },
         { root: 'A', chordType: '7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
-        { root: 'A', chordType: 'min7♭5', duration: 4 },
+        { root: 'A', chordType: 'min7?5', duration: 4 },
         { root: 'D', chordType: '7', duration: 4 },
         { root: 'G', chordType: 'min7', duration: 4 },
         { root: 'G', chordType: 'min7', duration: 4 },
@@ -244,13 +244,13 @@ const JazzChordsApp = () => {
         { root: 'C', chordType: '7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'E', chordType: 'min7♭5', duration: 4 },
+        { root: 'E', chordType: 'min7?5', duration: 4 },
         { root: 'A', chordType: '7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'G', chordType: 'min7', duration: 4 },
         { root: 'C', chordType: '7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
       ],
     },
@@ -263,8 +263,8 @@ const JazzChordsApp = () => {
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
-        { root: 'E♭', chordType: 'min7', duration: 4 },
-        { root: 'E♭', chordType: 'min7', duration: 4 },
+        { root: 'E?', chordType: 'min7', duration: 4 },
+        { root: 'E?', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
       ],
@@ -294,8 +294,8 @@ const JazzChordsApp = () => {
         { root: 'C', chordType: 'maj7', duration: 5 },
         { root: 'C', chordType: 'maj7', duration: 5 },
         { root: 'C', chordType: 'maj7', duration: 5 },
-        { root: 'F♯', chordType: 'min7♭5', duration: 5 },
-        { root: 'B', chordType: '7♭9', duration: 5 },
+        { root: 'F?', chordType: 'min7?5', duration: 5 },
+        { root: 'B', chordType: '7?9', duration: 5 },
         { root: 'E', chordType: 'min7', duration: 5 },
         { root: 'E', chordType: 'min7', duration: 5 },
         { root: 'E', chordType: 'min7', duration: 5 },
@@ -328,51 +328,51 @@ const JazzChordsApp = () => {
       bpm: 100,
       beatsPerMeasure: 4,
       progression: [
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'B♭', chordType: 'min7', duration: 2 },
-        { root: 'E♭', chordType: '7', duration: 2 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'min7', duration: 2 },
-        { root: 'D♭', chordType: '7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'min7', duration: 2 },
+        { root: 'E?', chordType: '7', duration: 2 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'min7', duration: 2 },
+        { root: 'D?', chordType: '7', duration: 2 },
         { root: 'G', chordType: 'min7', duration: 2 },
         { root: 'C', chordType: '7', duration: 2 },
         { root: 'F', chordType: 'min7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'B♭', chordType: 'min7', duration: 2 },
-        { root: 'E♭', chordType: '7', duration: 2 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'min7', duration: 2 },
-        { root: 'D♭', chordType: '7', duration: 2 },
+        { root: 'B?', chordType: '7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'min7', duration: 2 },
+        { root: 'E?', chordType: '7', duration: 2 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'min7', duration: 2 },
+        { root: 'D?', chordType: '7', duration: 2 },
         { root: 'G', chordType: 'min7', duration: 2 },
         { root: 'C', chordType: '7', duration: 2 },
         { root: 'F', chordType: 'min7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2 },
-        { root: 'E♭', chordType: 'maj7', duration: 2 },
-        { root: 'B♭', chordType: 'maj7', duration: 2 },
-        { root: 'A', chordType: 'min7♭5', duration: 2 },
+        { root: 'B?', chordType: '7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 2 },
+        { root: 'B?', chordType: 'maj7', duration: 2 },
+        { root: 'A', chordType: 'min7?5', duration: 2 },
         { root: 'D', chordType: '7', duration: 2 },
         { root: 'G', chordType: 'min7', duration: 4 },
         { root: 'G', chordType: 'min7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 2 },
         { root: 'F', chordType: '7', duration: 2 },
         { root: 'F', chordType: 'min7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'B♭', chordType: 'min7', duration: 2 },
-        { root: 'E♭', chordType: '7', duration: 2 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'min7', duration: 2 },
-        { root: 'D♭', chordType: '7', duration: 2 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'min7', duration: 2 },
+        { root: 'E?', chordType: '7', duration: 2 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'min7', duration: 2 },
+        { root: 'D?', chordType: '7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 2 },
         { root: 'F', chordType: '7', duration: 2 },
         { root: 'F', chordType: 'min7', duration: 2 },
-        { root: 'B♭', chordType: '7', duration: 2 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
       ],
     },
     {
@@ -381,13 +381,13 @@ const JazzChordsApp = () => {
       beatsPerMeasure: 4,
       progression: [
         { root: 'B', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'min7', duration: 4 },
-        { root: 'D♭', chordType: '7', duration: 4 },
-        { root: 'G♭', chordType: 'maj7', duration: 4 },
-        { root: 'C♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'min7', duration: 4 },
+        { root: 'D?', chordType: '7', duration: 4 },
+        { root: 'G?', chordType: 'maj7', duration: 4 },
+        { root: 'C?', chordType: 'maj7', duration: 4 },
       ],
     },
     {
@@ -399,9 +399,9 @@ const JazzChordsApp = () => {
         { root: 'G', chordType: 'min7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
       ],
     },
@@ -430,7 +430,7 @@ const JazzChordsApp = () => {
         { root: 'G', chordType: '7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'B', chordType: 'min7♭5', duration: 4 },
+        { root: 'B', chordType: 'min7?5', duration: 4 },
         { root: 'E', chordType: '7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
@@ -438,11 +438,11 @@ const JazzChordsApp = () => {
         { root: 'G', chordType: '7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'B', chordType: 'min7♭5', duration: 4 },
+        { root: 'B', chordType: 'min7?5', duration: 4 },
         { root: 'E', chordType: '7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'B', chordType: 'min7♭5', duration: 4 },
+        { root: 'B', chordType: 'min7?5', duration: 4 },
         { root: 'E', chordType: '7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
@@ -454,7 +454,7 @@ const JazzChordsApp = () => {
         { root: 'G', chordType: '7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'maj7', duration: 4 },
-        { root: 'B', chordType: 'min7♭5', duration: 4 },
+        { root: 'B', chordType: 'min7?5', duration: 4 },
         { root: 'E', chordType: '7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
       ],
@@ -465,35 +465,35 @@ const JazzChordsApp = () => {
       beatsPerMeasure: 4,
       progression: [
         { root: 'C', chordType: 'min7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'D', chordType: 'min7♭5', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'D', chordType: 'min7?5', duration: 4 },
         { root: 'G', chordType: '7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
-        { root: 'G', chordType: 'min7♭5', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
+        { root: 'G', chordType: 'min7?5', duration: 4 },
         { root: 'C', chordType: '7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
-        { root: 'A♭', chordType: 'maj7', duration: 4 },
+        { root: 'A?', chordType: 'maj7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 2 },
-        { root: 'D', chordType: 'min7♭5', duration: 2 },
+        { root: 'B?', chordType: '7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 2 },
+        { root: 'D', chordType: 'min7?5', duration: 2 },
         { root: 'G', chordType: '7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
       ],
@@ -503,14 +503,14 @@ const JazzChordsApp = () => {
       bpm: 70,
       beatsPerMeasure: 4,
       progression: [
-        { root: 'C♯', chordType: 'min7', duration: 4, voicing: 'open', octave: -1 },
-        { root: 'F♯', chordType: 'maj7', duration: 4, bass: 'A♯', voicing: 'closed' },
+        { root: 'C?', chordType: 'min7', duration: 4, voicing: 'open', octave: -1 },
+        { root: 'F?', chordType: 'maj7', duration: 4, bass: 'A?', voicing: 'closed' },
         { root: 'B', chordType: 'maj7', duration: 4, voicing: 'open', inversion: 1 },
         { root: 'B', chordType: 'min7', duration: 4, bass: 'D', voicing: 'closed' },
         { root: 'E', chordType: '7', duration: 4, voicing: 'open', inversion: 2 },
         { root: 'A', chordType: 'maj7', duration: 4, voicing: 'closed' },
-        { root: 'D♯', chordType: 'min7', duration: 4, bass: 'F♯', voicing: 'open' },
-        { root: 'G♯', chordType: '7', duration: 4, voicing: 'closed', inversion: 1, octave: 1 },
+        { root: 'D?', chordType: 'min7', duration: 4, bass: 'F?', voicing: 'open' },
+        { root: 'G?', chordType: '7', duration: 4, voicing: 'closed', inversion: 1, octave: 1 },
       ],
     },
     {
@@ -530,7 +530,7 @@ const JazzChordsApp = () => {
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
-        { root: 'F♯', chordType: 'min7♭5', duration: 4 },
+        { root: 'F?', chordType: 'min7?5', duration: 4 },
         { root: 'B', chordType: '7', duration: 4 },
         { root: 'E', chordType: '7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
@@ -546,7 +546,7 @@ const JazzChordsApp = () => {
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
-        { root: 'F♯', chordType: 'min7♭5', duration: 4 },
+        { root: 'F?', chordType: 'min7?5', duration: 4 },
         { root: 'B', chordType: '7', duration: 4 },
         { root: 'E', chordType: '7', duration: 2 },
         { root: 'A', chordType: 'min7', duration: 2 },
@@ -615,12 +615,12 @@ const JazzChordsApp = () => {
       bpm: 180,
       beatsPerMeasure: 4,
       progression: [
-        { root: 'D♯', chordType: 'maj7', duration: 2 },
-        { root: 'D♯', chordType: 'maj7', duration: 2 },
-        { root: 'E♯', chordType: 'maj7', duration: 2 },
-        { root: 'E♯', chordType: 'maj7', duration: 2 },
-        { root: 'F♯', chordType: 'maj7', duration: 2 },
-        { root: 'F♯', chordType: 'maj7', duration: 2 },
+        { root: 'D?', chordType: 'maj7', duration: 2 },
+        { root: 'D?', chordType: 'maj7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 2 },
+        { root: 'E?', chordType: 'maj7', duration: 2 },
+        { root: 'F?', chordType: 'maj7', duration: 2 },
+        { root: 'F?', chordType: 'maj7', duration: 2 },
         { root: 'F', chordType: 'maj7', duration: 2 },
         { root: 'F', chordType: 'maj7', duration: 2 },
       ],
@@ -633,9 +633,9 @@ const JazzChordsApp = () => {
         { root: 'B', chordType: 'maj7', duration: 2, voicing: 'closed' },
         { root: 'D', chordType: '7', duration: 2, voicing: 'open' },
         { root: 'G', chordType: 'maj7', duration: 2, bass: 'B', voicing: 'closed' },
-        { root: 'B♭', chordType: '7', duration: 2, voicing: 'open' },
-        { root: 'E♭', chordType: 'maj7', duration: 4, voicing: 'closed' },
-        { root: 'F♯', chordType: '7', duration: 4, bass: 'A♯', voicing: 'open' },
+        { root: 'B?', chordType: '7', duration: 2, voicing: 'open' },
+        { root: 'E?', chordType: 'maj7', duration: 4, voicing: 'closed' },
+        { root: 'F?', chordType: '7', duration: 4, bass: 'A?', voicing: 'open' },
         { root: 'B', chordType: 'maj7', duration: 4, voicing: 'closed' },
         { root: 'B', chordType: 'maj7', duration: 4, inversion: 2 },
       ],
@@ -647,8 +647,8 @@ const JazzChordsApp = () => {
       progression: [
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
         { root: 'A', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
         { root: 'G', chordType: '7', duration: 4 },
@@ -683,8 +683,8 @@ const JazzChordsApp = () => {
         { root: 'F', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: 'min7', duration: 4 },
-        { root: 'B♭', chordType: 'min7', duration: 4 },
+        { root: 'B?', chordType: 'min7', duration: 4 },
+        { root: 'B?', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: 'min7', duration: 4 },
       ],
@@ -697,11 +697,11 @@ const JazzChordsApp = () => {
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'D', chordType: 'min7', duration: 4 },
-        { root: 'E♭', chordType: 'maj7', duration: 4 },
+        { root: 'E?', chordType: 'maj7', duration: 4 },
       ],
     },
     {
@@ -709,10 +709,10 @@ const JazzChordsApp = () => {
       bpm: 260,
       beatsPerMeasure: 4,
       progression: [
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
-        { root: 'C♯', chordType: 'min7', duration: 4 },
-        { root: 'F♯', chordType: '7', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
+        { root: 'C?', chordType: 'min7', duration: 4 },
+        { root: 'F?', chordType: '7', duration: 4 },
         { root: 'B', chordType: 'maj7', duration: 4 },
         { root: 'B', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
@@ -724,11 +724,11 @@ const JazzChordsApp = () => {
       bpm: 280,
       beatsPerMeasure: 4,
       progression: [
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: '7', duration: 4 },
-        { root: 'B♭', chordType: 'maj7', duration: 4 },
+        { root: 'B?', chordType: 'maj7', duration: 4 },
         { root: 'G', chordType: 'min7', duration: 4 },
         { root: 'C', chordType: 'min7', duration: 4 },
         { root: 'F', chordType: '7', duration: 4 },
@@ -758,12 +758,12 @@ const JazzChordsApp = () => {
         { root: 'F', chordType: '7', duration: 4 },
         { root: 'F', chordType: '7', duration: 4 },
         { root: 'F', chordType: '7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 4 },
         { root: 'F', chordType: '7', duration: 4 },
         { root: 'F', chordType: '7', duration: 4 },
         { root: 'C', chordType: '7', duration: 4 },
-        { root: 'B♭', chordType: '7', duration: 4 },
+        { root: 'B?', chordType: '7', duration: 4 },
         { root: 'F', chordType: '7', duration: 4 },
         { root: 'F', chordType: '7', duration: 4 },
       ],
@@ -777,8 +777,8 @@ const JazzChordsApp = () => {
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
-        { root: 'D♭', chordType: 'maj7', duration: 4 },
-        { root: 'D♭', chordType: 'maj7', duration: 4 },
+        { root: 'D?', chordType: 'maj7', duration: 4 },
+        { root: 'D?', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
         { root: 'C', chordType: 'maj7', duration: 4 },
       ],
@@ -845,7 +845,7 @@ const JazzChordsApp = () => {
     const ctx: AudioContext = new AudioCtx();
     setAudioContext(ctx);
     return () => {
-      // don't return the Promise from close() Ã¢â‚¬â€ keep cleanup synchronous
+      // don't return the Promise from close() â€” keep cleanup synchronous
       if (ctx && typeof ctx.close === 'function') {
         void ctx.close();
       }
@@ -857,11 +857,11 @@ const JazzChordsApp = () => {
   // Circle of fifths visibility toggle
   const [showCircleOfFifths, setShowCircleOfFifths] = useState<boolean>(true);
   const enharmonicMap: Record<string, string> = {
-    'C♯': 'D♭',
-    'D♯': 'E♭',
-    'F♯': 'G♭',
-    'G♯': 'A♭',
-    'A♯': 'B♭',
+    'C?': 'D?',
+    'D?': 'E?',
+    'F?': 'G?',
+    'G?': 'A?',
+    'A?': 'B?',
   };
   const displayNote = (note: string) => {
     if (!useFlats) return note;
@@ -871,11 +871,11 @@ const JazzChordsApp = () => {
   // Normalize note names to match the roots array (convert flats to sharps)
   const normalizeNote = (note: string): string => {
     const flatToSharpMap: Record<string, string> = {
-      'D♭': 'C♯',
-      'E♭': 'D♯', 
-      'G♭': 'F♯',
-      'A♭': 'G♯',
-      'B♭': 'A♯'
+      'D?': 'C?',
+      'E?': 'D?', 
+      'G?': 'F?',
+      'A?': 'G?',
+      'B?': 'A?'
     };
     return flatToSharpMap[note] ?? note;
   };
@@ -1454,19 +1454,19 @@ const JazzChordsApp = () => {
     
     // Dominant/7th chords (considered major quality for circle of fifths)
     if (name === '7' || name === '9' || name === '11' || name === '13' || name.includes('7sus') || 
-        name === 'alt' || name.includes('7♯5') || name.includes('7♭5') || name.includes('7♯9') || 
-        name.includes('7♭9') || name.includes('7♯11') || name.includes('7♭13')) {
+        name === 'alt' || name.includes('7?5') || name.includes('7?5') || name.includes('7?9') || 
+        name.includes('7?9') || name.includes('7?11') || name.includes('7?13')) {
       return 'major'; // Dominant chords light up major tiles
     }
     
     // Major chord types
     if (name.includes('maj') || name === '6' || name.includes('add9') || name.includes('sus2') || 
-        name.includes('sus4') || name === '' || name.includes('♯11') || name.includes('6/9')) {
+        name.includes('sus4') || name === '' || name.includes('?11') || name.includes('6/9')) {
       return 'major';
     }
     
     // Diminished and augmented chords
-    if (name.includes('dim') || name.includes('aug') || name.includes('°') || name.includes('+')) {
+    if (name.includes('dim') || name.includes('aug') || name.includes('�') || name.includes('+')) {
       return 'other';
     }
     
@@ -1622,16 +1622,16 @@ const JazzChordsApp = () => {
     const renderOctave = (octave: number) => {
       const keys = [
         { note: 'C', isBlack: false },
-        { note: 'C♯', isBlack: true },
+        { note: 'C?', isBlack: true },
         { note: 'D', isBlack: false },
-        { note: 'D♯', isBlack: true },
+        { note: 'D?', isBlack: true },
         { note: 'E', isBlack: false },
         { note: 'F', isBlack: false },
-        { note: 'F♯', isBlack: true },
+        { note: 'F?', isBlack: true },
         { note: 'G', isBlack: false },
-        { note: 'G♯', isBlack: true },
+        { note: 'G?', isBlack: true },
         { note: 'A', isBlack: false },
-        { note: 'A♯', isBlack: true },
+        { note: 'A?', isBlack: true },
         { note: 'B', isBlack: false },
       ];
 
@@ -1689,16 +1689,16 @@ const JazzChordsApp = () => {
     const renderOctaveMobile = (octave: number) => {
       const keys = [
         { note: 'C', isBlack: false },
-        { note: 'C♯', isBlack: true },
+        { note: 'C?', isBlack: true },
         { note: 'D', isBlack: false },
-        { note: 'D♯', isBlack: true },
+        { note: 'D?', isBlack: true },
         { note: 'E', isBlack: false },
         { note: 'F', isBlack: false },
-        { note: 'F♯', isBlack: true },
+        { note: 'F?', isBlack: true },
         { note: 'G', isBlack: false },
-        { note: 'G♯', isBlack: true },
+        { note: 'G?', isBlack: true },
         { note: 'A', isBlack: false },
-        { note: 'A♯', isBlack: true },
+        { note: 'A?', isBlack: true },
         { note: 'B', isBlack: false },
       ].reverse();
 
@@ -1754,7 +1754,7 @@ const JazzChordsApp = () => {
     return (
       <>
         {/* Desktop - Sticky horizontal keyboard */}
-        <div className="hidden lg:block sticky top-0 z-30 bg-black bg-opacity-50 backdrop-blur-sm py-4 border-b-2 border-white border-opacity-20">
+        <div className="hidden lg:block sticky top-0 z-30 bg-black/50 backdrop-blur-sm py-4 border-b-2 border-white/20">
           <div className="flex justify-center items-end gap-0 overflow-x-auto pb-2 px-4">
             {octaves.map(octave => renderOctave(octave))}
           </div>
@@ -1767,13 +1767,13 @@ const JazzChordsApp = () => {
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="fixed top-1/2 right-0 -translate-y-1/2 z-40 bg-purple-600 text-white px-2 py-6 rounded-l-lg shadow-lg"
           >
-            {sidebarOpen ? 'Ã¢â€ â€™' : 'Ã°Å¸Å½Â¹'}
+            {sidebarOpen ? 'â†’' : 'ðŸŽ¹'}
           </button>
 
           {/* Overlay */}
           {sidebarOpen && (
             <div
-              className="fixed inset-0 bg-black bg-opacity-50 z-40"
+              className="fixed inset-0 bg-black/50 z-40"
               onClick={() => setSidebarOpen(false)}
             />
           )}
@@ -1802,7 +1802,7 @@ const JazzChordsApp = () => {
   //   { degree: 'IV', offset: 5 },
   //   { degree: 'V', offset: 7 },
   //   { degree: 'vi', offset: 9 },
-  //   { degree: 'viiÃ‚Â°', offset: 11 },
+  //   { degree: 'viiÂ°', offset: 11 },
   // ];
 
   // const getRomanMapping = (tonic: string) => { /* ...unused... */ };
@@ -1817,31 +1817,31 @@ const JazzChordsApp = () => {
     // With sharps by default, flats when useFlats is true
     const degreesWithSharps: Record<number, string> = {
       0: '1',      // Tonic
-      1: '♯1',     // Sharp 1
+      1: '?1',     // Sharp 1
       2: '2',      // Second
-      3: '♯2',     // Sharp 2
+      3: '?2',     // Sharp 2
       4: '3',      // Third
       5: '4',      // Fourth
-      6: '♯4',     // Sharp 4
+      6: '?4',     // Sharp 4
       7: '5',      // Fifth
-      8: '♯5',     // Sharp 5
+      8: '?5',     // Sharp 5
       9: '6',      // Sixth
-      10: '♯6',    // Sharp 6
+      10: '?6',    // Sharp 6
       11: '7',     // Seventh
     };
     
     const degreesWithFlats: Record<number, string> = {
       0: '1',      // Tonic
-      1: '♭2',     // Flat 2
+      1: '?2',     // Flat 2
       2: '2',      // Second
-      3: '♭3',     // Flat 3
+      3: '?3',     // Flat 3
       4: '3',      // Third
       5: '4',      // Fourth
-      6: '♭5',     // Flat 5
+      6: '?5',     // Flat 5
       7: '5',      // Fifth
-      8: '♭6',     // Flat 6
+      8: '?6',     // Flat 6
       9: '6',      // Sixth
-      10: '♭7',    // Flat 7
+      10: '?7',    // Flat 7
       11: '7',     // Seventh
     };
     
@@ -1897,7 +1897,7 @@ const JazzChordsApp = () => {
                 <div className="bg-slate-700/50 rounded-lg p-4">
                   <h3 className="font-semibold text-white mb-2">Additional Options</h3>
                   <ul className="list-disc list-inside space-y-1">
-                    <li><strong>Enharmonic:</strong> Toggle between ♯ and ♭ note names</li>
+                    <li><strong>Enharmonic:</strong> Toggle between ? and ? note names</li>
                     <li><strong>Scale Degrees:</strong> Show note relationships</li>
                     <li><strong>Fixed Tonic:</strong> Set a key center for analysis</li>
                     <li><strong>Bass Note:</strong> Add a slash chord bass note</li>
@@ -1918,7 +1918,7 @@ const JazzChordsApp = () => {
       <PianoKeyboard />
       
       {/* Header */}
-      <div className="p-4 bg-black bg-opacity-30 backdrop-blur-sm">
+      <div className="p-4 bg-black/30 backdrop-blur-sm">
         <div className="flex items-center justify-center gap-3 mb-4">
           <h1 className="text-3xl md:text-4xl font-bold text-center">jazzchords.io</h1>
           <button
@@ -1944,14 +1944,14 @@ const JazzChordsApp = () => {
               {/* C# */}
               <div key="C#" style={{ gridColumn: '2 / 4', aspectRatio: '1' }} className="relative">
                 <button
-                  onClick={() => setSelectedRoot('C♯')}
-                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'C♯' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
+                  onClick={() => setSelectedRoot('C?')}
+                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'C?' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
                 >
-                  {displayNote('C♯')}
+                  {displayNote('C?')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
-                    {degreeForRoot('C♯', fixedTonic ?? selectedRoot)}
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                    {degreeForRoot('C?', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
                 <button
@@ -1965,7 +1965,7 @@ const JazzChordsApp = () => {
                     if (!found) return;
                     const newItem: ProgressChord = {
                       id: newId,
-                      root: 'C♯',
+                      root: 'C?',
                       chordType: chordType,
                       inversion: 0,
                       octave: octaveShift,
@@ -1988,8 +1988,8 @@ const JazzChordsApp = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: selectedRoot === 'C♯' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
-                    color: selectedRoot === 'C♯' ? '#1e293b' : '#1e293b',
+                    background: selectedRoot === 'C?' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
+                    color: selectedRoot === 'C?' ? '#1e293b' : '#1e293b',
                     borderRadius: '9999px',
                     fontSize: '0.9rem',
                     lineHeight: 1,
@@ -2005,14 +2005,14 @@ const JazzChordsApp = () => {
               {/* D# */}
               <div key="D#" style={{ gridColumn: '4 / 6', aspectRatio: '1' }} className="relative">
                 <button
-                  onClick={() => setSelectedRoot('D♯')}
-                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'D♯' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
+                  onClick={() => setSelectedRoot('D?')}
+                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'D?' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
                 >
-                  {displayNote('D♯')}
+                  {displayNote('D?')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
-                    {degreeForRoot('D♯', fixedTonic ?? selectedRoot)}
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                    {degreeForRoot('D?', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
                 <button
@@ -2026,7 +2026,7 @@ const JazzChordsApp = () => {
                     if (!found) return;
                     const newItem: ProgressChord = {
                       id: newId,
-                      root: 'D♯',
+                      root: 'D?',
                       chordType: chordType,
                       inversion: 0,
                       octave: octaveShift,
@@ -2049,8 +2049,8 @@ const JazzChordsApp = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: selectedRoot === 'D♯' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
-                    color: selectedRoot === 'D♯' ? '#1e293b' : '#1e293b',
+                    background: selectedRoot === 'D?' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
+                    color: selectedRoot === 'D?' ? '#1e293b' : '#1e293b',
                     borderRadius: '9999px',
                     fontSize: '0.9rem',
                     lineHeight: 1,
@@ -2069,14 +2069,14 @@ const JazzChordsApp = () => {
               {/* F# */}
               <div key="F#" style={{ gridColumn: '8 / 10', aspectRatio: '1' }} className="relative">
                 <button
-                  onClick={() => setSelectedRoot('F♯')}
-                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'F♯' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
+                  onClick={() => setSelectedRoot('F?')}
+                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'F?' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
                 >
-                  {displayNote('F♯')}
+                  {displayNote('F?')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
-                    {degreeForRoot('F♯', fixedTonic ?? selectedRoot)}
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                    {degreeForRoot('F?', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
                 <button
@@ -2090,7 +2090,7 @@ const JazzChordsApp = () => {
                     if (!found) return;
                     const newItem: ProgressChord = {
                       id: newId,
-                      root: 'F♯',
+                      root: 'F?',
                       chordType: chordType,
                       inversion: 0,
                       octave: octaveShift,
@@ -2113,8 +2113,8 @@ const JazzChordsApp = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: selectedRoot === 'F♯' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
-                    color: selectedRoot === 'F♯' ? '#1e293b' : '#1e293b',
+                    background: selectedRoot === 'F?' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
+                    color: selectedRoot === 'F?' ? '#1e293b' : '#1e293b',
                     borderRadius: '9999px',
                     fontSize: '0.9rem',
                     lineHeight: 1,
@@ -2130,14 +2130,14 @@ const JazzChordsApp = () => {
               {/* G# */}
               <div key="G#" style={{ gridColumn: '10 / 12', aspectRatio: '1' }} className="relative">
                 <button
-                  onClick={() => setSelectedRoot('G♯')}
-                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'G♯' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
+                  onClick={() => setSelectedRoot('G?')}
+                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'G?' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
                 >
-                  {displayNote('G♯')}
+                  {displayNote('G?')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
-                    {degreeForRoot('G♯', fixedTonic ?? selectedRoot)}
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                    {degreeForRoot('G?', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
                 <button
@@ -2151,7 +2151,7 @@ const JazzChordsApp = () => {
                     if (!found) return;
                     const newItem: ProgressChord = {
                       id: newId,
-                      root: 'G♯',
+                      root: 'G?',
                       chordType: chordType,
                       inversion: 0,
                       octave: octaveShift,
@@ -2174,8 +2174,8 @@ const JazzChordsApp = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: selectedRoot === 'G♯' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
-                    color: selectedRoot === 'G♯' ? '#1e293b' : '#1e293b',
+                    background: selectedRoot === 'G?' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
+                    color: selectedRoot === 'G?' ? '#1e293b' : '#1e293b',
                     borderRadius: '9999px',
                     fontSize: '0.9rem',
                     lineHeight: 1,
@@ -2191,14 +2191,14 @@ const JazzChordsApp = () => {
               {/* A# */}
               <div key="A#" style={{ gridColumn: '12 / 14', aspectRatio: '1' }} className="relative">
                 <button
-                  onClick={() => setSelectedRoot('A♯')}
-                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'A♯' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
+                  onClick={() => setSelectedRoot('A?')}
+                  className={`w-full h-full rounded-lg font-semibold transition-all flex items-center justify-center text-xs ${selectedRoot === 'A?' ? 'bg-gradient-to-b from-slate-600 to-slate-800 scale-110 text-amber-400 shadow-lg ring-2 ring-amber-400/50' : 'bg-gradient-to-b from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-slate-300'} border border-slate-600`}
                 >
-                  {displayNote('A♯')}
+                  {displayNote('A?')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
-                    {degreeForRoot('A♯', fixedTonic ?? selectedRoot)}
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
+                    {degreeForRoot('A?', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
                 <button
@@ -2212,7 +2212,7 @@ const JazzChordsApp = () => {
                     if (!found) return;
                     const newItem: ProgressChord = {
                       id: newId,
-                      root: 'A♯',
+                      root: 'A?',
                       chordType: chordType,
                       inversion: 0,
                       octave: octaveShift,
@@ -2235,8 +2235,8 @@ const JazzChordsApp = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: selectedRoot === 'A♯' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
-                    color: selectedRoot === 'A♯' ? '#1e293b' : '#1e293b',
+                    background: selectedRoot === 'A?' ? '#ffffff' : 'linear-gradient(to bottom, #fbbf24, #f59e0b)',
+                    color: selectedRoot === 'A?' ? '#1e293b' : '#1e293b',
                     borderRadius: '9999px',
                     fontSize: '0.9rem',
                     lineHeight: 1,
@@ -2263,7 +2263,7 @@ const JazzChordsApp = () => {
                   {displayNote('C')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
                     {degreeForRoot('C', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2324,7 +2324,7 @@ const JazzChordsApp = () => {
                   {displayNote('D')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
                     {degreeForRoot('D', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2385,7 +2385,7 @@ const JazzChordsApp = () => {
                   {displayNote('E')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
                     {degreeForRoot('E', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2446,7 +2446,7 @@ const JazzChordsApp = () => {
                   {displayNote('F')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
                     {degreeForRoot('F', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2507,7 +2507,7 @@ const JazzChordsApp = () => {
                   {displayNote('G')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
                     {degreeForRoot('G', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2568,7 +2568,7 @@ const JazzChordsApp = () => {
                   {displayNote('A')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
                     {degreeForRoot('A', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2629,7 +2629,7 @@ const JazzChordsApp = () => {
                   {displayNote('B')}
                 </button>
                 {showRoman && (
-                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black bg-opacity-40 px-1 rounded pointer-events-none">
+                  <div className="absolute bottom-1 right-1 text-xs opacity-75 bg-black/40 px-1 rounded pointer-events-none">
                     {degreeForRoot('B', fixedTonic ?? selectedRoot)}
                   </div>
                 )}
@@ -2696,8 +2696,8 @@ const JazzChordsApp = () => {
                   className="relative w-20 h-10 rounded-full p-1 transition-all bg-slate-700 border border-slate-600"
                 >
                   <div className="absolute inset-0 flex items-center justify-between px-3 text-white pointer-events-none">
-                    <span className="text-lg font-medium">♭</span>
-                    <span className="text-lg font-medium">♯</span>
+                    <span className="text-lg font-medium">?</span>
+                    <span className="text-lg font-medium">?</span>
                   </div>
                   <div
                     className="absolute top-1/2 -translate-y-1/2 rounded-full"
@@ -2714,8 +2714,8 @@ const JazzChordsApp = () => {
                   className="relative w-20 h-10 rounded-full p-1 transition-all bg-slate-700 border border-slate-600"
                 >
                   <div className="absolute inset-0 flex items-center justify-between px-3.5 text-xs text-white opacity-90 pointer-events-none">
-                    <span>✕</span>
-                    <span>✓</span>
+                    <span>?</span>
+                    <span>?</span>
                   </div>
                   <div
                     className="absolute top-1/2 -translate-y-1/2 rounded-full"
@@ -2896,7 +2896,7 @@ const JazzChordsApp = () => {
                 onClick={() => playChord(selectedRoot, chordType)}
                 className="bg-gradient-to-br from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 
                            p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200
-                           active:scale-95 font-bold text-base border-2 border-white border-opacity-30 w-full h-full"
+                           active:scale-95 font-bold text-base border-2 border-white/30 w-full h-full"
               >
                 {getChordDisplay(selectedRoot, chordType)}
               </button>
@@ -2962,7 +2962,7 @@ const JazzChordsApp = () => {
                   }
                 }
               }}
-              className="px-3 py-2 rounded-lg bg-gradient-to-b from-slate-700 to-slate-800 text-white text-sm border border-slate-600 focus:outline-none focus:ring-2 focus:ring-amber-400/50"
+              className="px-3 py-2 rounded-lg bg-slate-800 text-white text-sm border border-slate-600 focus:outline-none focus:ring-2 focus:ring-amber-400/50 [&>option]:bg-slate-800 [&>option]:text-white"
               defaultValue=""
             >
               <option value="">Select a standard...</option>
@@ -2982,8 +2982,8 @@ const JazzChordsApp = () => {
                 className="relative w-20 h-10 rounded-full p-1 transition-all duration-200 bg-slate-700 border border-slate-600"
               >
                 <div className="absolute inset-0 flex items-center justify-between px-3.5 text-xs text-white opacity-90 pointer-events-none">
-                  <span>✕</span>
-                  <span>✓</span>
+                  <span>?</span>
+                  <span>?</span>
                 </div>
                 <div
                   className="absolute top-1/2 -translate-y-1/2 rounded-full"
@@ -3009,8 +3009,8 @@ const JazzChordsApp = () => {
 
                 {/* Animated sparkle clock line - rendered FIRST so it's behind everything */}
                 {(() => {
-                  const majorOrder = ['C','G','D','A','E','B','F♯','C♯','A♭','E♭','B♭','F'];
-                  const minorOrder = ['A','E','B','F♯','C♯','G♯','D♯','A♯','F','C','G','D'];
+                  const majorOrder = ['C','G','D','A','E','B','F?','C?','A?','E?','B?','F'];
+                  const minorOrder = ['A','E','B','F?','C?','G?','D?','A?','F','C','G','D'];
                   let angleDeg: number | null = null;
                   let glowColor = '';
                   let accentColor = '';
@@ -3049,7 +3049,7 @@ const JazzChordsApp = () => {
                 })()}
 
                 {/* Outer arc slices - Major keys */}
-                {['C', 'G', 'D', 'A', 'E', 'B', 'F♯', 'C♯', 'A♭', 'E♭', 'B♭', 'F'].map((note, index) => {
+                {['C', 'G', 'D', 'A', 'E', 'B', 'F?', 'C?', 'A?', 'E?', 'B?', 'F'].map((note, index) => {
                   const startAngle = (index * 30 - 15 - 90) * Math.PI / 180;
                   const endAngle = (index * 30 + 15 - 90) * Math.PI / 180;
                   const innerR = 88;
@@ -3089,7 +3089,7 @@ const JazzChordsApp = () => {
                 })}
 
                 {/* Inner arc slices - Minor keys */}
-                {['A', 'E', 'B', 'F♯', 'C♯', 'G♯', 'D♯', 'A♯', 'F', 'C', 'G', 'D'].map((note, index) => {
+                {['A', 'E', 'B', 'F?', 'C?', 'G?', 'D?', 'A?', 'F', 'C', 'G', 'D'].map((note, index) => {
                   const startAngle = (index * 30 - 15 - 90) * Math.PI / 180;
                   const endAngle = (index * 30 + 15 - 90) * Math.PI / 180;
                   const innerR = 42;
@@ -3136,7 +3136,7 @@ const JazzChordsApp = () => {
                 <circle cx="160" cy="160" r="40" fill="#1e293b" stroke="#334155" strokeWidth="2" />
 
                 {/* Major chord labels */}
-                {['C', 'G', 'D', 'A', 'E', 'B', 'F♯', 'C♯', 'A♭', 'E♭', 'B♭', 'F'].map((note, index) => {
+                {['C', 'G', 'D', 'A', 'E', 'B', 'F?', 'C?', 'A?', 'E?', 'B?', 'F'].map((note, index) => {
                   const angle = (index * 30 - 90) * Math.PI / 180;
                   const radius = 119;
                   const x = 160 + radius * Math.cos(angle);
@@ -3166,7 +3166,7 @@ const JazzChordsApp = () => {
                 })}
 
                 {/* Minor chord labels */}
-                {['A', 'E', 'B', 'F♯', 'C♯', 'G♯', 'D♯', 'A♯', 'F', 'C', 'G', 'D'].map((note, index) => {
+                {['A', 'E', 'B', 'F?', 'C?', 'G?', 'D?', 'A?', 'F', 'C', 'G', 'D'].map((note, index) => {
                   const angle = (index * 30 - 90) * Math.PI / 180;
                   const radius = 64;
                   const x = 160 + radius * Math.cos(angle);
@@ -3197,13 +3197,13 @@ const JazzChordsApp = () => {
 
                 {/* Center text */}
                 <text x="160" y="160" textAnchor="middle" dominantBaseline="central" className="fill-slate-300 font-semibold" style={{ fontSize: '13px' }}>
-                  ♭ ↔ ♯
+                  ? ? ?
                 </text>
               </svg>
             </div>
             
             <div className="text-xs opacity-50 text-center">
-              Clockwise adds sharps (♯), counterclockwise adds flats (♭)
+              Clockwise adds sharps (?), counterclockwise adds flats (?)
             </div>
           </div>
         </div>}
@@ -3253,10 +3253,10 @@ const JazzChordsApp = () => {
                   const measureHasFocus = progression.some(p => p.measure === mIdx + 1 && p.id === tileFocusedId);
                   const measureMinH = measureHasFocus ? '120px' : '60px';
                   return (
-                    <div key={mIdx} data-measure={mIdx + 1} className={`relative p-2 ${isLastMeasure ? '' : 'border-r border-white border-opacity-20'}`}>
+                    <div key={mIdx} data-measure={mIdx + 1} className={`relative p-2 ${isLastMeasure ? '' : 'border-r border-white/20'}`}>
                       <div className="text-xs mb-2 opacity-60">{mIdx + 1}</div>
                       <div className="relative" style={{ minHeight: measureMinH }}>
-                        {/* beat cells - visual columns but positioned absolutely so tiles can be leftÃ¢â€ â€™right */}
+                        {/* beat cells - visual columns but positioned absolutely so tiles can be leftâ†’right */}
                         {Array.from({ length: beatsPerMeasure }).map((__, bIdx) => {
                           const leftPct = (bIdx / beatsPerMeasure) * 100;
                           const widthPct = 100 / beatsPerMeasure;
@@ -3330,7 +3330,7 @@ const JazzChordsApp = () => {
                                   return updated;
                                 });
                               }}
-                              className="absolute top-0 bottom-0 border-b border-white border-opacity-8"
+                              className="absolute top-0 bottom-0 border-b border-white/8"
                               style={{ left: `${leftPct}%`, width: `${widthPct}%`, zIndex: 1 }}
                             />
                           );
@@ -3345,12 +3345,12 @@ const JazzChordsApp = () => {
                             <div
                               aria-hidden
                               style={{ position: 'absolute', left: `calc(${plLeft}% + 2px)`, width: `calc(${plWidth}% - 4px)`, top: 6, zIndex: 19 }}
-                              className="pointer-events-none rounded bg-white bg-opacity-15 border border-white border-opacity-30"
+                              className="pointer-events-none rounded bg-white/15 border border-white/30"
                             />
                           );
                         })()}
 
-                        {/* render chord tiles positioned leftÃ¢â€ â€™right and sized by beat percentage */}
+                        {/* render chord tiles positioned leftâ†’right and sized by beat percentage */}
                         {chordsInMeasure.map(ch => {
                           const left = ((ch.beat - 1) / beatsPerMeasure) * 100;
                           const width = (Math.max(1, ch.durationBeats) / beatsPerMeasure) * 100;
@@ -3373,7 +3373,7 @@ const JazzChordsApp = () => {
                                 setTileFocusedId(prev => prev === ch.id ? null : prev);
                               }}
                               style={{ position: 'absolute', left: `calc(${left}% + 2px)`, width: `calc(${width}% - 4px)`, top: 0, zIndex: 10 }}
-                              className="group p-2 bg-white bg-opacity-5 rounded flex flex-col items-center text-sm overflow-visible"
+                              className="group p-2 bg-slate-700/80 border border-slate-500/50 rounded flex flex-col items-center text-sm overflow-visible"
                             >
                               {/* left resize handle */}
                               <div
@@ -3411,7 +3411,7 @@ const JazzChordsApp = () => {
                                     </div>
                                     
                                     {/* Individual chord bass note editor */}
-                                    <div className="mt-2 p-1 bg-black bg-opacity-20 rounded">
+                                    <div className="mt-2 p-1 bg-black/20 rounded">
                                       <div className="text-xs text-center text-gray-300 mb-1">Bass Note</div>
                                       <div className="flex flex-wrap gap-1 justify-center">
                                         <button
@@ -3422,7 +3422,7 @@ const JazzChordsApp = () => {
                                           }`}
                                           title="No bass note (use chord root)"
                                         >
-                                          ✕
+                                          ?
                                         </button>
                                         {roots.map(root => (
                                           <button
@@ -3515,7 +3515,7 @@ const JazzChordsApp = () => {
                                       setPreviewPlacement(newPr);
                                       previewRef.current = newPr;
                                     } else {
-                                      // no free slot starting here Ã¢â‚¬â€ try splitting the occupying chord if present
+                                      // no free slot starting here â€” try splitting the occupying chord if present
                                       const occupier = progressionRef.current.find(p => {
                                         const occStart = slotIndexFor(p.measure, p.beat);
                                         const occEnd = occStart + p.durationBeats - 1;
@@ -3650,7 +3650,7 @@ const JazzChordsApp = () => {
                                   window.addEventListener('pointerup', onPointerUp);
                                 }}
                               >
-                                <div className="bg-white bg-opacity-10 rounded-md p-1 flex items-center justify-center">
+                                <div className="bg-white/10 rounded-md p-1 flex items-center justify-center">
                                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="opacity-95">
                                     <path d="M12 5v14" />
                                     <path d="M5 12h14" />
@@ -3718,7 +3718,7 @@ const JazzChordsApp = () => {
               </a>
             </div>
             <p className="text-slate-500 text-sm mt-4">
-              Built with ♥ for jazz musicians and composers everywhere. © {new Date().getFullYear()} jazzchords.io
+              Built with ? for jazz musicians and composers everywhere. � {new Date().getFullYear()} jazzchords.io
             </p>
           </div>
         </div>
